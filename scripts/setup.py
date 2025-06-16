@@ -19,11 +19,11 @@ def setup_environment():
     try:
         import spacy
         try:
-            spacy.load("en_core_web_md")
+            spacy.load("en_core_web_sm")
             print("SpaCy model already downloaded")
         except:
             print("Downloading SpaCy model...")
-            subprocess.run(["python", "-m", "spacy", "download", "en_core_web_md"], check=True)
+            subprocess.run(["python3", "-m", "spacy", "download", "en_core_web_sm"], check=True)
             print("SpaCy model downloaded")
     except ImportError:
         print("SpaCy not installed. Please install requirements first.")

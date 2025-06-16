@@ -40,11 +40,11 @@ class DSLParser:
     
     def __init__(self):
         try:
-            self.nlp = spacy.load("en_core_web_md")
+            self.nlp = spacy.load("en_core_web_sm")
         except:
             print("Downloading spaCy model...")
-            os.system("python -m spacy download en_core_web_md")
-            self.nlp = spacy.load("en_core_web_md")
+            os.system("python3 -m spacy download en_core_web_sm")
+            self.nlp = spacy.load("en_core_web_sm")
         
         self.zero_shot = pipeline("zero-shot-classification")
         
