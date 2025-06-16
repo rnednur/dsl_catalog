@@ -83,6 +83,8 @@ python3 scripts/demo.py --help
    ```bash
    python3 -m spacy download en_core_web_sm
    ```
+   
+   **Note:** The system uses the small English model (`en_core_web_sm`) which is sufficient for most NLP tasks and faster to download.
 
 7. **Set Up Environment Variables**
    ```bash
