@@ -24,9 +24,14 @@ Choose one of the following methods:
 pip install -e .
 ```
 
-**Method B: Direct Requirements**
+**Method B: Direct Requirements (Flexible)**
 ```bash
 pip install -r requirements.txt
+```
+
+**Method C: Stable Requirements (Tested Versions)**
+```bash
+pip install -r requirements-stable.txt
 ```
 
 ### 4. Verify Installation
@@ -134,9 +139,15 @@ python3 -m spacy download en_core_web_sm
 ```
 
 ### Issue: `ImportError: cannot import name 'cached_download'`
-**Solution:**
+**Solution:** This is a compatibility issue between sentence-transformers and huggingface_hub:
 ```bash
-pip install --upgrade transformers sentence-transformers
+pip uninstall -y sentence-transformers huggingface_hub transformers
+pip install sentence-transformers==2.2.2 transformers==4.28.1 huggingface_hub==0.16.4
+```
+
+Or use the stable requirements:
+```bash
+pip install -r requirements-stable.txt
 ```
 
 ### Issue: `ERROR: Could not find a version that satisfies the requirement pgvector==0.1.11`
