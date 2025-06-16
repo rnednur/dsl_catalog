@@ -46,7 +46,10 @@ class DSLParser:
             os.system("python3 -m spacy download en_core_web_sm")
             self.nlp = spacy.load("en_core_web_sm")
         
-        self.zero_shot = pipeline("zero-shot-classification")
+        # Use a smaller, faster model for zero-shot classification
+        # Note: Using a lighter model for faster loading and inference
+        self.zero_shot = pipeline("zero-shot-classification", 
+                                model="typeform/distilbert-base-uncased-mnli")
         
         # Define label sets for classification
         self.query_type_labels = [

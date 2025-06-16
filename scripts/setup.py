@@ -4,6 +4,10 @@ import subprocess
 import sys
 from pathlib import Path
 
+# Add the project root to the Python path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
 def setup_environment():
     """Set up the environment for the NL2SQL system"""
     print("Setting up environment for NL2SQL...")
