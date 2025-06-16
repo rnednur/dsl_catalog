@@ -1,6 +1,12 @@
+import sys
+import os
 import time
 import json
 from typing import Dict, Any, List
+
+# Add the project root to the Python path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 from src.main import nl2sql, get_nl2sql
 

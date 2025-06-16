@@ -48,11 +48,16 @@ cd nl2sql-dsl
 
 2. Create a virtual environment:
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. Install the package in development mode:
+```bash
+pip install -e .
+```
+
+Or install dependencies directly:
 ```bash
 pip install -r requirements.txt
 ```
@@ -65,7 +70,14 @@ cp .env.example .env
 
 5. Run the setup script:
 ```bash
-python scripts/setup.py
+python3 scripts/setup.py
+```
+
+### Development Setup
+
+For development, install additional tools:
+```bash
+pip install -r requirements-dev.txt
 ```
 
 ### Usage
@@ -74,17 +86,17 @@ python scripts/setup.py
 
 ```bash
 # Interactive mode
-python src/main.py -i
+python3 src/main.py -i
 
 # Process a single query
-python src/main.py "Show me sales by region for last quarter"
+python3 src/main.py "Show me sales by region for last quarter"
 ```
 
 #### API Server
 
 ```bash
 # Start the API server
-python src/api.py
+python3 src/api.py
 ```
 
 API endpoints:
@@ -119,10 +131,10 @@ You can customize the DSL components to improve query accuracy for your specific
 
 ```bash
 # Generate a template
-python scripts/add_custom_dsl.py template
+python3 scripts/add_custom_dsl.py template
 
 # Add a custom filter component
-python scripts/add_custom_dsl.py filter \
+python3 scripts/add_custom_dsl.py filter \
   --table sales \
   --column region \
   --operator equals \
@@ -131,7 +143,7 @@ python scripts/add_custom_dsl.py filter \
   --save
 
 # Add a custom join component
-python scripts/add_custom_dsl.py join \
+python3 scripts/add_custom_dsl.py join \
   --left-table sales \
   --right-table customers \
   --left-column customer_id \
@@ -140,7 +152,7 @@ python scripts/add_custom_dsl.py join \
   --save
 
 # Add components from a JSON file
-python scripts/add_custom_dsl.py from-file data/dsl_components/custom_components.json
+python3 scripts/add_custom_dsl.py from-file data/dsl_components/custom_components.json
 ```
 
 ### DSL Component Structure
@@ -165,12 +177,12 @@ pytest tests/
 
 Run a demo with sample queries:
 ```bash
-python scripts/demo.py
+python3 scripts/demo.py
 ```
 
 Run an interactive demo:
 ```bash
-python scripts/demo.py -i
+python3 scripts/demo.py -i
 ```
 
 ## Contributing
