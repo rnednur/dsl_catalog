@@ -29,7 +29,6 @@ The system consists of several components:
 5. **Schema Loader** - Extracts database schema information
 6. **API Server** - Exposes functionality via REST API
 
-![Architecture Diagram](https://mermaid.ink/img/pako:eNqNkl1LwzAUhv_KIRdD6Q_oZnszECYOdoHgxYqXIcfuoE1KkoLT9b-btunW6mB4leTJm_fkIwnUXRNDRSv8AouTIw5EcV4zCyoN5twjjnO68DRgjtAMeMSd8Ft2KWUyKSTccZRrxG5jyZuEWK3TmHqEGRQPv0oUXS2S5Ij0mX7QlVh3bR5KKmOiNaGipLgYcZW0U8LtLCIrqEGNcLI7qCLH5U_-t3xtI_k7vJ06PDSLv8KJcx5xvXVRg80zf-FeQexNyR3cIjEDzQ4GHRkc5c9QYYbJcnewMKjZFr0_QOc1rdjKrgC8rRjbXiLslzWFB6jZqA5QCd4gSKjQ6AJq1GXDsQaF2Tk8IpSoysDtBurJmOPY-g-w0a5WU5iXYy9yh7xRSbPQzPWCcDQNvXEQDr3JcDqdhEHYj8J--AW2BpFs?type=png)
 
 ## Getting Started
 
